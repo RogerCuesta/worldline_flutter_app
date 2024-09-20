@@ -1,0 +1,14 @@
+{
+  "appTitle": "POI Stadium List",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "searchFieldLabelText": "Search",
+  "@searchFieldLabelText": {
+    "description": "SearchField Label Text"
+  },
+  "noDataText": "No results found for your search.",
+  "@noDataText": {
+    "description": "Text displayed when no found results for your search"
+  }
+}
