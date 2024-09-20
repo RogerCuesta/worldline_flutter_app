@@ -27,7 +27,15 @@ class PoiDetailsView extends StatelessWidget {
         builder: (context) => GestureDetector(
           behavior: HitTestBehavior.opaque,
           onTap: () => _onBackButtonTapped(context),
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(Icons.arrow_back, color: Colors.white),
+        ),
+      ),
+      title: Text(
+        poi!.title!,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
@@ -36,11 +44,12 @@ class PoiDetailsView extends StatelessWidget {
   Widget _buildBody() {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         child: Column(
           children: [
-            _buildPoiTitleAndGeocoordenades(),
             _buildPoiImage(),
+            const SizedBox(height: 14),
+            _buildPoiTitleAndGeocoordenades(),
           ],
         ),
       ),
@@ -52,13 +61,6 @@ class PoiDetailsView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        // Title
-        Text(
-          poi!.title!,
-          style: const TextStyle(
-              fontFamily: 'Butler', fontSize: 20, fontWeight: FontWeight.w900),
-        ),
-        const SizedBox(height: 14),
         // Geocoordenades
         Row(
           children: [
@@ -72,7 +74,7 @@ class PoiDetailsView extends StatelessWidget {
               poi!.geocoordinates!,
               style: const TextStyle(
                 fontFamily: 'Butler',
-                fontSize: 20,
+                fontSize: 17,
                 fontWeight: FontWeight.w900,
               ),
             ),

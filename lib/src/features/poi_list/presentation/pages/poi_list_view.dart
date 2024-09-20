@@ -30,7 +30,6 @@ class PoiListViewState extends State<PoiListView> {
     return AppBar(
       title: Text(
         l10n.appTitle,
-        style: const TextStyle(color: Colors.black),
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:worldline_flutter_app/injection_container.dart';
 import 'package:worldline_flutter_app/src/config/routes/routes.dart';
+import 'package:worldline_flutter_app/src/config/theme/app_theme.dart';
 import 'package:worldline_flutter_app/src/features/poi_list/presentation/cubit/poi_list_bloc.dart';
 
 class MyApp extends StatelessWidget {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         ],
         onGenerateTitle: (BuildContext context) =>
             AppLocalizations.of(context).appTitle,
-        theme: ThemeData(),
+        theme: theme(),
         darkTheme: ThemeData.dark(),
         onGenerateRoute: AppRoutes.onGenerateRoutes,
       ),
